@@ -1,43 +1,68 @@
 var path = require('path');
 var webpack = require('webpack');
-var CopyPlugin = require('copy-webpack-plugin');
+const router = require('./router.js')
+const common = require('./webpack.common.js')
+const CopyPlugin = require('copy-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+// const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const entry = {}
+const htmls = []
+
+router.forEach((item) => {
+  entry[item] = `./src/pages/${item}/index.js`
+  htmls.push(
+      new HtmlWebpackPlugin(
+          {
+            template: `./src/pages/${item}.html`,
+            filename: `${item}.html`,
+            chunks: [item],
+            minify: {
+              removeAttributeQuotes: true,
+              removeComments: true,
+              collapseWhitespace: true,
+              removeScriptTypeAttributes: true,
+              removeStyleLinkTypeAttributes: true
+            }
+          }
+      )
+  )
+})
 
 module.exports = {
+  mode: "production",
   entry: {
-    build: './src/index.js'
+    ...entry
   },
   output: {
-    path: __dirname + '/build',
-    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/[name].bound.[hash].js',
   },
-  resolveLoader: {
-    root: path.join(__dirname, 'node_modules')
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          output: {
+            comments: false,
+          },
+          compress: {
+            warning: false,
+          },
+          warnings: false,
+        },
+      }),
+    ],
   },
+  ...common,
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-    new OptimizeCSSPlugin({
-      cssProcessorOptions: config.build.productionSourceMap
-          ? {safe: true, map: {inline: false}}
-          : {safe: true}
-    }),
+    ...htmls,
     new CopyPlugin({
       patterns: [
         {
           from: 'static',
-          to: 'dist/static'
+          to: 'static',
         },
-        // If absolute path is a `glob` we replace backslashes with forward slashes, because only forward slashes can be used in the `glob`
-        path.posix.join(
-            path.resolve(__dirname, 'src').replace(/\\/g, '/'),
-            '*.txt'
-        ),
       ],
     })
   ]
