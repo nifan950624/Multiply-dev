@@ -13,7 +13,7 @@ router.forEach((item) => {
         template: `./src/pages/${item}.html`,
         chunks: [item],
         filename: `${item}.html`,
-        inject: 'body'
+        inject: true
       })
   )
 })
@@ -22,13 +22,15 @@ module.exports = {
   mode: 'development',
   devServer: {
     clientLogLevel: 'warning',
+    watchContentBase: true,
     hot: true,
-    contentBase: './dist',
+    contentBase: './src/pages',
     compress: true,
     host: 'localhost',
     port: 2000,
     open: false,
     overlay: false,
+    progress: true,
     proxy: {
       '/api': {
         target: '',

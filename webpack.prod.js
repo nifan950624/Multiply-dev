@@ -31,25 +31,31 @@ router.forEach((item) => {
 })
 
 module.exports = {
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
   mode: "production",
   entry: {
     ...entry
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].bound.[hash].js',
+    filename: 'js/[name]-bound.[hash].js',
   },
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
         uglifyOptions: {
           output: {
-            comments: false,
-          },
-          compress: {
-            warning: false,
+            beautify: true,
+            comments: false
           },
           warnings: false,
+          compress: {
+            drop_console: true,
+          },
         },
       }),
     ],
@@ -61,9 +67,9 @@ module.exports = {
       patterns: [
         {
           from: 'static',
-          to: 'static',
+          to: 'static'
         },
-      ],
+      ]
     })
   ]
 };

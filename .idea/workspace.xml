@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17f91f5a-6c55-49fa-93c0-545d876c0f44" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.woff2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/other/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/other/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Tntzo5JpRxk.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/Tntzo5JpRxk.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.dev.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.prod.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +63,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/assets/font" />
       <recent name="$PROJECT_DIR$/static/images" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/pages" />
-      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/src/pages/index" />
+      <recent name="$PROJECT_DIR$/static/style" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -65,7 +82,9 @@
       <updated>1590136510860</updated>
       <workItem from="1590136512223" duration="4957000" />
       <workItem from="1590145703735" duration="7979000" />
-      <workItem from="1590369010672" duration="9290000" />
+      <workItem from="1590369010672" duration="10063000" />
+      <workItem from="1590383376676" duration="9000" />
+      <workItem from="1590386332956" duration="10972000" />
     </task>
     <servers />
   </component>
@@ -73,18 +92,24 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="548" y="242" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590151975190">
-      <screen x="0" y="23" width="1440" height="826" />
+    <state x="2468" y="419" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590397701070">
+      <screen x="1920" y="180" width="1440" height="900" />
     </state>
     <state x="548" y="242" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.826@0.23.1440.826" timestamp="1590151975190" />
-    <state x="489" y="152" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590151995036">
-      <screen x="0" y="23" width="1440" height="826" />
+    <state x="2468" y="419" key="#com.intellij.fileTypes.FileTypeChooser/1920.180.1440.900/0.0.1920.1080@1920.180.1440.900" timestamp="1590397701070" />
+    <state x="2409" y="321" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590392645117">
+      <screen x="1920" y="180" width="1440" height="900" />
     </state>
     <state x="489" y="152" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.826@0.23.1440.826" timestamp="1590151995036" />
+    <state x="2409" y="321" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.180.1440.900/0.0.1920.1080@1920.180.1440.900" timestamp="1590392645117" />
     <state x="2409" y="340" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.203.1440.877/0.23.1920.1006@1920.203.1440.877" timestamp="1590137609231" />
     <state x="285" y="217" key="run.anything.popup" timestamp="1590147933403">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="285" y="217" key="run.anything.popup/0.23.1440.826@0.23.1440.826" timestamp="1590147933403" />
+    <state x="2221" y="203" key="search.everywhere.popup" timestamp="1590398905886">
+      <screen x="1920" y="203" width="1440" height="877" />
+    </state>
+    <state x="2221" y="203" key="search.everywhere.popup/1920.203.1440.877/0.23.1920.1006@1920.203.1440.877" timestamp="1590398905886" />
   </component>
 </project>
