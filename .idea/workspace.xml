@@ -2,25 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17f91f5a-6c55-49fa-93c0-545d876c0f44" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/font/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/header/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/header/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/reset.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/other/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/other/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Tntzo5JpRxk.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/Tntzo5JpRxk.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/reset.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/other.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/other.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/other/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/other/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +74,8 @@
       <workItem from="1590145703735" duration="7979000" />
       <workItem from="1590369010672" duration="10063000" />
       <workItem from="1590383376676" duration="9000" />
-      <workItem from="1590386332956" duration="10972000" />
+      <workItem from="1590386332956" duration="12213000" />
+      <workItem from="1590454886458" duration="5047000" />
     </task>
     <servers />
   </component>
@@ -107,9 +98,9 @@
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="285" y="217" key="run.anything.popup/0.23.1440.826@0.23.1440.826" timestamp="1590147933403" />
-    <state x="2221" y="203" key="search.everywhere.popup" timestamp="1590398905886">
+    <state x="2221" y="203" width="838" height="1032" key="search.everywhere.popup" timestamp="1590455838361">
       <screen x="1920" y="203" width="1440" height="877" />
     </state>
-    <state x="2221" y="203" key="search.everywhere.popup/1920.203.1440.877/0.23.1920.1006@1920.203.1440.877" timestamp="1590398905886" />
+    <state x="2221" y="203" width="838" height="1032" key="search.everywhere.popup/1920.203.1440.877/0.23.1920.1006@1920.203.1440.877" timestamp="1590455838361" />
   </component>
 </project>
