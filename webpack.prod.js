@@ -42,7 +42,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name]-bound.[hash].js',
+    filename: 'js/[hash:7].js',
   },
   optimization: {
     minimizer: [

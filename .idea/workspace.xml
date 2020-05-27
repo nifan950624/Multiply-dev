@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17f91f5a-6c55-49fa-93c0-545d876c0f44" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/header/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/nifan.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/event_bus.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/style/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/header/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/other.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/other.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/other/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/other/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.dev.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.prod.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,13 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1cFtkDIM61fpHag1r7orbrogV1X" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="添加" />
+    <ConfirmationsSetting value="2" id="新增" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -49,7 +57,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="Docker" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -75,12 +83,18 @@
       <workItem from="1590369010672" duration="10063000" />
       <workItem from="1590383376676" duration="9000" />
       <workItem from="1590386332956" duration="12213000" />
-      <workItem from="1590454886458" duration="5047000" />
+      <workItem from="1590454886458" duration="8630000" />
+      <workItem from="1590478847802" duration="1514000" />
+      <workItem from="1590495450625" duration="499000" />
+      <workItem from="1590542786942" duration="167000" />
+      <workItem from="1590542963750" duration="130000" />
+      <workItem from="1590543102461" duration="85000" />
+      <workItem from="1590543243692" duration="4781000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2468" y="419" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590397701070">
@@ -94,13 +108,20 @@
     <state x="489" y="152" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.826@0.23.1440.826" timestamp="1590151995036" />
     <state x="2409" y="321" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.180.1440.900/0.0.1920.1080@1920.180.1440.900" timestamp="1590392645117" />
     <state x="2409" y="340" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.203.1440.877/0.23.1920.1006@1920.203.1440.877" timestamp="1590137609231" />
+    <state x="2040" y="203" width="1201" height="877" key="SettingsEditor" timestamp="1590543297073">
+      <screen x="1920" y="203" width="1440" height="826" />
+    </state>
+    <state x="2040" y="181" key="SettingsEditor/1920.180.1440.900/0.23.1920.1057@1920.180.1440.900" timestamp="1590481436922" />
+    <state x="2040" y="203" key="SettingsEditor/1920.203.1440.826/0.23.1920.1057@1920.203.1440.826" timestamp="1590543297073" />
+    <state x="2040" y="203" width="1201" height="877" key="SettingsEditor/1920.203.1440.877/0.23.1920.1006@1920.203.1440.877" timestamp="1590543118096" />
     <state x="285" y="217" key="run.anything.popup" timestamp="1590147933403">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="285" y="217" key="run.anything.popup/0.23.1440.826@0.23.1440.826" timestamp="1590147933403" />
-    <state x="2221" y="203" width="838" height="1032" key="search.everywhere.popup" timestamp="1590455838361">
-      <screen x="1920" y="203" width="1440" height="877" />
+    <state x="2221" y="203" width="838" height="972" key="search.everywhere.popup" timestamp="1590550988367">
+      <screen x="1920" y="203" width="1440" height="826" />
     </state>
+    <state x="2221" y="203" width="838" height="972" key="search.everywhere.popup/1920.203.1440.826/0.23.1920.1057@1920.203.1440.826" timestamp="1590550988367" />
     <state x="2221" y="203" width="838" height="1032" key="search.everywhere.popup/1920.203.1440.877/0.23.1920.1006@1920.203.1440.877" timestamp="1590455838361" />
   </component>
 </project>

@@ -59,6 +59,16 @@ a {
   color: cornflowerblue;
 }
 
+
+.container {
+  display: block;
+  width: 1200px;
+  @media (min-width: 1800px) {
+    width: 1600px;
+  }
+  margin: 0 auto;
+}
+
 .icon {
   width: 1em;
   height: 1em;

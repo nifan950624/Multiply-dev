@@ -46,7 +46,7 @@ module.exports = {
   },
   output: {
     path: '/dist',
-    filename: 'js/[name].[hash].js',
+    filename: 'js/[name][hash:7].js',
   },
   plugins: [...htmls, new CopyPlugin({
     patterns: [

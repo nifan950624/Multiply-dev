@@ -1,5 +1,7 @@
 import './index.scss'
 import $ from 'jquery'
+import eventBus from "../../assets/js/event_bus";
+
 
 const view = {
   el: '.header',
@@ -22,6 +24,9 @@ const controller = {
     this.el = this.view.el
     this.createHeader()
     this.getHeaderTags()
+    eventBus.on('first', (data) => {
+      window.location.href = '/other.html'
+    })
   },
   createHeader() {
     $(this.el).append(`
