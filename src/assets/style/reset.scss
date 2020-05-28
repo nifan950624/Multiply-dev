@@ -1,3 +1,4 @@
+@import '~bootstrap/scss/bootstrap';
 
 * {
   box-sizing: border-box;
@@ -54,20 +55,18 @@ table {
   border-spacing: 0;
 }
 
-a {
+a:hover {
   text-decoration: none;
-  color: cornflowerblue;
 }
 
-
-.container {
-  display: block;
-  width: 1200px;
-  @media (min-width: 1800px) {
-    width: 1600px;
-  }
-  margin: 0 auto;
-}
+//.container {
+//  display: block;
+//  width: 1200px;
+//  @media (min-width: 1800px) {
+//    width: 1600px;
+//  }
+//  margin: 0 auto;
+//}
 
 .icon {
   width: 1em;
@@ -76,3 +75,5 @@ a {
   fill: currentColor;
   overflow: hidden;
 }
+
+

@@ -1,4 +1,17 @@
 @import "../../assets/style/reset";
 @import '../../assets/font/iconfont.css';
 
+.container {
+  .row {
+    padding: 5px 0;
 
+    .box {
+      height: 400px;
+      background: #f5f5f5;
+    }
+
+    [class*="col-"] {
+      padding: 5px;
+    }
+  }
+}
