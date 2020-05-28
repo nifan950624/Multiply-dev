@@ -11,12 +11,12 @@ const entry = {}
 const htmls = []
 
 for (let key in router) {
-  let isIinject = true
+  let isInject = true
 
   if (key === 'header') {
-    isIinject = false
+    isInject = false
   } else if (key === 'footer') {
-    isIinject = false
+    isInject = false
   } else {
     entry[key] = path.join(__dirname, router[key])
   }
@@ -26,7 +26,7 @@ for (let key in router) {
         template: `./${key}.html`,
         chunks: [key],
         filename: `${key}.html`,
-        inject: isIinject,
+        inject: isInject,
         minify: {
           removeAttributeQuotes: true,
           removeComments: true,
