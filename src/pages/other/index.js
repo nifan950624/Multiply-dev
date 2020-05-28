@@ -1,6 +1,7 @@
 import './index.scss'
 import '../../components/header/index'
-import $ from 'jquery'
+import 'popper.js'
+import 'bootstrap'
 import eventBus from "../../assets/js/event_bus";
 
 const view = {
@@ -20,11 +21,12 @@ const controller = {
     this.view = view
     this.model = model
     this.$el = this.view.$el
+    window.onload = this.onload
   },
+  onload() {
+    $('.page').removeClass('invisible').addClass('visible')
+    $('.spinner').hide()
+  }
 }
 
 controller._init(view, model)
-
-$('.page').removeClass('invisible').addClass('visible').find('.spinner').hide()
-
-

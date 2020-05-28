@@ -5,7 +5,7 @@ import eventBus from "../../assets/js/event_bus";
 
 
 const view = {
-  $el: $('.header'),
+  $el: $('#header'),
 
   render(data) {
   }
