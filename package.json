@@ -20,9 +20,7 @@
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^6.0.1",
     "css-loader": "^3.5.3",
-    "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
-    "raw-loader": "^4.0.1",
     "sass": "^1.26.5",
     "sass-loader": "^7.3.1",
     "style-loader": "^1.2.1",
@@ -35,7 +33,6 @@
   "dependencies": {
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
-    "popper": "^1.0.1",
     "popper.js": "^1.16.1"
   }
 }
