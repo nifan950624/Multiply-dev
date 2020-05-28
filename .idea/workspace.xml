@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17f91f5a-6c55-49fa-93c0-545d876c0f44" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other.html" beforeDir="false" afterPath="$PROJECT_DIR$/other.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/other/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/other/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +86,7 @@
       <workItem from="1590543102461" duration="85000" />
       <workItem from="1590543243692" duration="12254000" />
       <workItem from="1590567609530" duration="5596000" />
-      <workItem from="1590593769790" duration="12112000" />
+      <workItem from="1590593769790" duration="12581000" />
     </task>
     <servers />
   </component>
