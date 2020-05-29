@@ -1,14 +1,12 @@
-var path = require('path');
-var webpack = require('webpack');
-const router = require('./router.js')
-const common = require('./webpack.common.js')
-const CopyPlugin = require('copy-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin')
-// const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const entry = {}
-const htmls = []
+const path = require('path'),
+    webpack = require('webpack'),
+    router = require('./router.js'),
+    common = require('./webpack.common.js'),
+    CopyPlugin = require('copy-webpack-plugin'),
+    UglifyJsPlugin = require('uglifyjs-webpack-plugin'),
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    entry = {},
+    htmls = []
 
 for (let key in router) {
   let isInject = true
@@ -39,12 +37,12 @@ for (let key in router) {
 }
 
 module.exports = {
+  mode: "production",
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
     maxAssetSize: 512000
   },
-  mode: "production",
   entry: {
     ...entry
   },
@@ -57,7 +55,6 @@ module.exports = {
       new UglifyJsPlugin({
         uglifyOptions: {
           output: {
-            beautify: true,
             comments: false
           },
           warnings: false,

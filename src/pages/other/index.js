@@ -1,11 +1,12 @@
-import './index.scss'
+import '../../components/loading/index'
 import '../../components/header/index'
+import './index.scss'
 import 'popper.js'
 import 'bootstrap'
 import eventBus from "../../assets/js/event_bus";
 
 const view = {
-  $el: $('body'),
+  $el: $('.page'),
 
   render(data) {
   }
@@ -21,11 +22,11 @@ const controller = {
     this.view = view
     this.model = model
     this.$el = this.view.$el
-    window.onload = this.onload
+    this.handleLoaded()
   },
-  onload() {
-    $('.page').removeClass('invisible').addClass('visible')
-    $('.spinner').hide()
+  handleLoaded() {
+    this.$el.removeClass('invisible').addClass('visible')
+    eventBus.emit('hideLoading')
   }
 }
 

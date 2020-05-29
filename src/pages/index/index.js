@@ -1,27 +1,17 @@
-import './index.scss'
+import '../../components/loading/index'
 import '../../components/header/index'
+import './index.scss'
 import 'popper.js'
 import 'bootstrap'
 import eventBus from "../../assets/js/event_bus";
 
 const view = {
-  $el: $('body'),
+  $el: $('.page'),
   render(data) {
   }
 }
 
-const model = {
-  _get() {
-    $.ajax('api/a.json', {
-      method: 'get',
-      headers: {
-        'Content-Type': 'json',
-      }
-    }).then((res) => {
-      console.log(res)
-    })
-  }
-}
+const model = {}
 
 const controller = {
   view: null,
@@ -32,19 +22,20 @@ const controller = {
     this.model = model
     this.$el = this.view.$el
     this.handleClick()
-    this.model._get()
-    window.onload = this.onload
+    this.handleLoaded()
   },
   handleClick() {
     this.$el.find('.btn').on('click', (e) => {
       console.log('点我了')
     })
   },
-  onload() {
-    $('.page').removeClass('invisible').addClass('visible')
-    $('.spinner').hide()
+  handleLoaded() {
+    this.$el.removeClass('invisible').addClass('visible')
+    eventBus.emit('hideLoading')
   }
 }
 
 controller._init(view, model)
+
+
 

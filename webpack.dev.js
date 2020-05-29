@@ -1,11 +1,11 @@
-const path = require('path');
-var webpack = require('webpack');
-const config = require('./webpack.common.js')
-const router = require('./router.js')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyPlugin = require('copy-webpack-plugin');
-const entry = {}
-const htmls = []
+const path = require('path'),
+    webpack = require('webpack'),
+    config = require('./webpack.common.js'),
+    router = require('./router.js'),
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    CopyPlugin = require('copy-webpack-plugin'),
+    entry = {},
+    htmls = []
 
 for (let key in router) {
   let isInject = true
