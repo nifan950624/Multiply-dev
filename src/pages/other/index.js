@@ -3,7 +3,8 @@ import '../../components/header/index'
 import './index.scss'
 import 'popper.js'
 import 'bootstrap'
-import eventBus from "../../assets/js/event_bus";
+import {showModal, hideModal} from "../../components/modal";
+import {showLoading, hideLoading} from "../../components/loading";
 
 const view = {
   $el: $('.page'),
@@ -26,7 +27,7 @@ const controller = {
   },
   handleLoaded() {
     this.$el.removeClass('invisible').addClass('visible')
-    eventBus.emit('hideLoading')
+    hideLoading()
   }
 }
 

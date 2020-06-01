@@ -4,6 +4,8 @@ import './index.scss'
 import 'popper.js'
 import 'bootstrap'
 import eventBus from "../../assets/js/event_bus";
+import {showLoading, hideLoading} from "../../components/loading/index";
+import {showModal, hideModal} from '../../components/modal/index'
 
 const view = {
   $el: $('.page'),
@@ -26,12 +28,12 @@ const controller = {
   },
   handleClick() {
     this.$el.find('.btn').on('click', (e) => {
-      console.log('点我了')
+      showModal()
     })
   },
   handleLoaded() {
     this.$el.removeClass('invisible').addClass('visible')
-    eventBus.emit('hideLoading')
+    hideLoading()
   }
 }
 
