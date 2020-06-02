@@ -55,6 +55,7 @@ module.exports = {
       new UglifyJsPlugin({
         uglifyOptions: {
           output: {
+            beautify: false,
             comments: false
           },
           warnings: false,

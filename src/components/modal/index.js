@@ -1,4 +1,3 @@
-import eventBus from "../../assets/js/event_bus";
 
 const controller = {
   _init() {

@@ -1,7 +1,7 @@
 const eventBus = {
   bus: {},
 
-  //订阅
+  // 订阅
   on(name, fn) {
     const {bus} = this
 
@@ -12,7 +12,7 @@ const eventBus = {
     bus[name].push(fn)
   },
 
-  //发布
+  // 发布
   emit(name, data) {
     const {bus} = this
 

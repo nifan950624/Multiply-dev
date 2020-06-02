@@ -1,4 +1,3 @@
-
 const controller = {
   _init() {
     this.createLoader()
@@ -14,8 +13,13 @@ const controller = {
   handleLoadingHide() {
     $('#spinner').hide()
   },
-  handleLoadingShow() {
+  handleLoadingShow(time) {
     $('#spinner').show()
+    if (typeof time === 'number') {
+      setTimeout(() => {
+        $('#spinner').hide()
+      }, time)
+    }
   }
 }
 
