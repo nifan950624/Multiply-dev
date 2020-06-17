@@ -28,6 +28,7 @@ const controller = {
   },
   handleClick() {
     this.$el.find('.btn').on('click', (e) => {
+      console.log('asgasg')
       showToast()
     })
   },
