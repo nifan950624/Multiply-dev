@@ -31,6 +31,7 @@ const controller = {
     for (let i = 0; i < navItems.length; i++) {
       let item = navItems[i]
       let href = $(item).find('.nav-link').attr('href')
+      href = href.indexOf('.') > -1 ? href.substring(1) : href
 
       if (href === pathname) {
         $(item).addClass('active').siblings().each((index, ele) => {
