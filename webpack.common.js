@@ -80,7 +80,8 @@ for (let key in router) {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'css/[name][hash].css'
+        filename: 'css/[name][hash].css',
+        publicPath: ENV === 'production' ? './' : '/'
       }),
       new webpack.ProvidePlugin({
         $: 'jquery',

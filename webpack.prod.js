@@ -20,6 +20,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js',
+    publicPath: "./"
   },
   optimization: {
     ...config.optimization,
@@ -42,11 +43,29 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        use: {
+          loader: 'html-loader',
+          options: {
+            attributes: {
+              list: [
+                {
+                  tag: 'img',
+                  attribute: 'src',
+                  type: 'src',
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
         loader: 'url-loader',
         options: {
           limit: 5000,
-          name: 'static/img/[name].[ext]'
+          name: 'static/img/[name].[ext]',
+          publicPath: './'
         }
       },
       {
@@ -54,7 +73,8 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 5000,
-          name: 'static/media/[name].[ext]'
+          name: 'static/media/[name].[ext]',
+          publicPath: './'
         }
       },
       {
@@ -62,7 +82,8 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 5000,
-          name: 'static/fonts/[name].[ext]'
+          name: 'static/fonts/[name].[ext]',
+          publicPath: './'
         }
       },
       ...config.rules
