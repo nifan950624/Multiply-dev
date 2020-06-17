@@ -3,7 +3,7 @@ const controller = {
     this.createLoader()
   },
   createLoader() {
-    $('body').append(`
+    $('body').prepend(`
       <div class="spinner" id="spinner">
         <div class="spinner-border" role="status">
         </div>

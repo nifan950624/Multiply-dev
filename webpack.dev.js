@@ -1,45 +1,40 @@
 const path = require('path'),
     webpack = require('webpack'),
     config = require('./webpack.common.js'),
-    router = require('./router.js'),
-    HtmlWebpackPlugin = require('html-webpack-plugin'),
-    CopyPlugin = require('copy-webpack-plugin'),
-    entry = {},
-    htmls = []
+    CopyPlugin = require('copy-webpack-plugin')
 
-for (let key in router) {
-  let isInject = true
-
-  if (key === 'header') {
-    isInject = false
-  } else if (key === 'footer') {
-    isInject = false
-  } else {
-    entry[key] = path.join(__dirname, router[key])
-  }
-  htmls.push(
-      new HtmlWebpackPlugin({
-        template: `./${key}.html`,
-        chunks: [key],
-        filename: `${key}.html`,
-        inject: isInject
-      })
-  )
-}
 
 module.exports = {
   mode: 'development',
+  module: {
+    rules: [
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        loader: 'file-loader',
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        loader: 'file-loader',
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'file-loader',
+      },
+      ...config.rules
+    ],
+  },
+  optimization: {
+    ...config.optimization
+  },
   devServer: {
-    clientLogLevel: 'warning',
-    watchContentBase: true,
     hot: true,
+    watchContentBase: true,
     publicPath: '/',
     compress: true,
-    host: 'localhost',
+    host: '0.0.0.0',
     port: 2000,
     open: false,
     overlay: false,
-    progress: true,
     proxy: {
       '/api': {
         target: 'http://localhost:2000',
@@ -51,19 +46,13 @@ module.exports = {
     },
   },
   entry: {
-    ...entry
+    ...config.entry
   },
   output: {
     path: '/dist',
     filename: 'js/[name][hash:7].js',
   },
-  plugins: [...htmls,
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      'window.$': 'jquery',
-    }),
-  ],
-  ...config,
+  plugins: [
+    ...config.plugins,
+  ]
 };

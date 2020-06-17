@@ -15,7 +15,7 @@ const controller = {
           <div class="toast-body">
           </div>
        </div>`
-    $('body').append(toast)
+    $('body').prepend(toast)
   },
 
   handleToastHide() {

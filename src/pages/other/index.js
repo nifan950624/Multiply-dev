@@ -1,8 +1,8 @@
-import '../../components/loading/index'
-import '../../components/header/index'
 import './index.scss'
 import 'popper.js'
 import 'bootstrap'
+import eventBus from "../../assets/js/event_bus";
+import '../../components/header/index'
 import {showModal, hideModal} from "../../components/modal";
 import {showLoading, hideLoading} from "../../components/loading";
 

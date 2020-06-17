@@ -1,34 +1,46 @@
-module.exports = {
-  module: {
+const entry = {},
+    htmls = [],
+    ENV = process.env.NODE_ENV,
+    router = require('./router'),
+    path = require('path'),
+    webpack = require('webpack'),
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    ProgressBarPlugin = require('progress-bar-webpack-plugin'),
+    MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+
+for (let key in router) {
+  let isInject = true
+
+  if (key === 'header') {
+    isInject = false
+  } else if (key === 'footer') {
+    isInject = false
+  } else {
+    entry[key] = path.join(__dirname, router[key])
+  }
+
+  htmls.push(
+      new HtmlWebpackPlugin({
+        template: `./${key}.html`,
+        chunks: [key, 'vendors', 'common'],
+        filename: `${key}.html`,
+        inject: isInject,
+        minify: ENV === 'production' ? {
+          removeAttributeQuotes: true,
+          removeComments: true,
+          collapseWhitespace: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true
+        } : false
+      })
+  )
+
+
+  module.exports = {
+    entry,
+
     rules: [
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: 'static/img/[name].[hash:7].[ext]'
-        }
-      },
-      {
-        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: 'static/media/[name].[hash:7].[ext]'
-        }
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: 'static/fonts/[name].[hash:7].[ext]'
-        }
-      },
-      {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
-      },
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
@@ -39,6 +51,45 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
+      }
+    ],
+    optimization: {
+      splitChunks: {
+        chunks: "all",
+        cacheGroups: {
+          vendors: {
+            minChunks: 1,
+            test: /[\\/]node_modules[\\/]/,
+            priority: 2
+          },
+          common: {
+            test: /[\\/]src[\\/]/,
+            minChunks: 2,
+            priority: 1,
+            reuseExistingChunk: true
+          }
+        }
+      }
+    },
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: 'css/[name][hash].css'
+      }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+        'window.$': 'jquery',
+      }),
+      new ProgressBarPlugin(),
+      ...htmls
     ]
   }
-};
+}

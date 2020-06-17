@@ -25,7 +25,7 @@ const controller = {
           </div>
         </div>
       </div>`
-    $('body').append(modal)
+    $('body').prepend(modal)
   },
 
   handleModalHide() {

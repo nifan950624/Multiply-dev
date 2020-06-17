@@ -1,40 +1,11 @@
 const path = require('path'),
     webpack = require('webpack'),
-    router = require('./router.js'),
-    common = require('./webpack.common.js'),
+    config = require('./webpack.common.js'),
     CopyPlugin = require('copy-webpack-plugin'),
     UglifyJsPlugin = require('uglifyjs-webpack-plugin'),
-    HtmlWebpackPlugin = require('html-webpack-plugin'),
-    entry = {},
-    htmls = []
+    OptimizeCssPlugin = require('optimize-css-assets-webpack-plugin'),
+    {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
-for (let key in router) {
-  let isInject = true
-
-  if (key === 'header') {
-    isInject = false
-  } else if (key === 'footer') {
-    isInject = false
-  } else {
-    entry[key] = path.join(__dirname, router[key])
-  }
-
-  htmls.push(
-      new HtmlWebpackPlugin({
-        template: `./${key}.html`,
-        chunks: [key],
-        filename: `${key}.html`,
-        inject: isInject,
-        minify: {
-          removeAttributeQuotes: true,
-          removeComments: true,
-          collapseWhitespace: true,
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true
-        }
-      })
-  )
-}
 
 module.exports = {
   mode: "production",
@@ -44,13 +15,14 @@ module.exports = {
     maxAssetSize: 512000
   },
   entry: {
-    ...entry
+    ...config.entry
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name][hash:7].js',
+    filename: 'js/[name].js',
   },
   optimization: {
+    ...config.optimization,
     minimizer: [
       new UglifyJsPlugin({
         uglifyOptions: {
@@ -64,17 +36,41 @@ module.exports = {
           },
         },
       }),
+      new OptimizeCssPlugin()
     ],
   },
-  ...common,
+  module: {
+    rules: [
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 5000,
+          name: 'static/img/[name].[ext]'
+        }
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 5000,
+          name: 'static/media/[name].[ext]'
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 5000,
+          name: 'static/fonts/[name].[ext]'
+        }
+      },
+      ...config.rules
+    ],
+  },
   plugins: [
-    ...htmls,
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      'window.$': 'jquery',
-    }),
+    ...config.plugins,
+    new CleanWebpackPlugin(),
     new CopyPlugin({
       patterns: [
         {
